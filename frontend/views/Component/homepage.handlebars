@@ -1,0 +1,122 @@
+<nav>
+        <div class="left">
+                <a href="./homepage"><img id="logo" src="../../public/assets/logo200.png" alt="Logo" style=""></a>
+                <form action="/" method="POST">
+                        <div class="form-group has-feedback has-search" style="margin-bottom:0px">
+                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                                <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                </form>
+        </div>
+
+        <div class="right">
+                <ul>
+                        <li class="cart">
+                                <span id="cart">{{cartTotal}}</span><a href="/user/cart/{{userid}}">Cart</a>
+                                {{!-- <ul class="dropdown">
+                                        <li id="current-cart"></li>
+                                </ul> --}}
+                        </li>
+                        <li>
+                                <a href=""><span id="username">Hi {{firstName}}</span>Account</a>
+                                <ul class="dropdown">
+                                        <li><a href="#">My account</a></li>
+                                        <li><a href="#">My order</a></li>
+                                        <li><a href="#">Log out</a></li>
+                                </ul>
+                        </li>
+
+                </ul>
+        </div>
+</nav>
+
+
+<div class="home-main">
+
+        <div class="slide1" style="display:flex">
+                <h2 class="subtitle animated fadeIn">First Slide</h2>
+        </div>
+        <div class="slide1" style="display:flex">
+                <h2 class="subtitle">Second Slide</h2>
+        </div>
+        <div class="slide1" style="display:flex">
+                <h2 class="subtitle">Third Slide</h2>
+        </div>
+</div>
+<div>
+        <a href="#" class="scroll-down" address="true"></a>
+</div>
+<div class="home-body">
+        <h1 class="wow fadeIn" id="best" style="font-size:1.5em">Best Sellers on Sale</h1>
+        <h3 class="wow fadeIn" style="color:rgb(151, 151, 151)">{{bookSeries}} SERIES</h3>
+        <div class="center wow fadeIn">
+                        {{#each book}}  
+                                <div class="slide2">
+                                        <a href="/search/{{_id}}">
+                                                <img src="{{bookImage}}" alt="book">
+                                                <div class="overlay">
+                                                        <div class="text">
+                                                                <p>{{bookName}}</p>
+                                                                <p>{{bookAuthor}}</p>
+                                                                <p class="book-price" style="font-weight:bold; font-size:.8em;">${{bookPrice}}</p>
+                                                        </div>
+                                                </div>
+                                        </a>
+                                </div>
+                        {{/each}}
+        </div>
+</div>
+<article class="wow fadeIn">
+        <section class="left-wrap">
+                <div>
+                        <div style="width:100%; text-align:center;">
+                                <img src="../../public/assets/month@2x.png" alt="popular in month" >
+                        </div>
+                        <div class="intro" style="width:100%;">
+                                <a href="/search/{{_id}}" style="z-index: 1;">
+                                        <img src="{{book2.bookImage}}" alt="">
+                                </a>
+                                <div style="margin-left: 1em; z-index: 1;">
+                                        <h2 class="book-title">{{book2.bookName}}</h2>
+                                        <p class="book-author">{{book2.bookAuthor}}</p>
+                                        <p>$<span class="book-price"> {{book2.bookPrice}}</span></p>
+                                </div>
+                        </div>
+                </div>
+               
+        </section>
+        <section class="right-wrap">
+                <ul>
+                        {{#each book1}}  
+                               <li>
+                                        <a href="/search/{{_id}}" class="detail-wrap">
+                                               
+                                                <img src="{{bookImage}}" alt="book" class="monthImg" >
+                                        </a>
+                                                <div style="display:inline-block;">
+                                                        <h2 class="book-title">{{bookName}}</h2>
+                                                        <p>{{bookAuthor}}</p>
+                                                        <p >$<span class="book-price"> {{bookPrice}}</span></p>
+
+                                                </div>
+                                               
+                                             
+                                      
+                               </li>      
+                        {{/each}}
+                </ul>
+                     
+        </section>
+</article>
+<script src="../../public/js/wow.js"></script>
+
+<script>
+        new WOW().init();
+        $(function() {
+                $('.scroll-down').click (function() {
+                        $('html, body').animate({scrollTop: $('.scroll-down').offset().top }, 1000,'swing');
+                        return false;
+                });
+        });
+       
+</script>
