@@ -425,7 +425,107 @@ text-align: center
   color:#fff;
   text-decoration: none;
 }
+.btn_about{
+  margin-top:1em;
+  background-color: rgb(0, 0, 212);
+  text-decoration: none;
+  color:#fff;
+  border-radius: 4px;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: .25s ease;
+  opacity: 1;
+  text-transform: uppercase;
+  width:200px;
+  display: inline-block;
+  position: relative;
+}
 
+.btn_about::after{
+  content:"";
+  background-image: url(../assets/arrow_white.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 15px;
+  height: 25px;
+  position: absolute;
+  top: 11px;
+  left: 175px;
+  opacity: 1;
+  transition: .25s ease;
+}
+
+.btn_about:hover{
+  color:#fff;
+  text-decoration: none;
+  background-color: rgb(49, 49, 218);
+}
+
+.btn_about:hover::after {
+  opacity: 0;
+  left: 185px;
+}
+
+.btn_about:focus{
+  color:#fff;
+  text-decoration: none;
+}
+.btn_about:visited{
+  color:#fff;
+  text-decoration: none;
+}.btn_home{
+  background-color: rgb(0, 0, 212);
+  text-decoration: none;
+  color:#fff;
+  border-radius: 4px;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: .25s ease;
+  opacity: 1;
+  text-transform: uppercase;
+  width:200px;
+  display: inline-block;
+  position: relative;
+    left: 41%;
+}
+
+.btn_home::after{
+  content:"";
+  background-image: url(../assets/arrow_white.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 15px;
+  height: 25px;
+  position: absolute;
+  top: 11px;
+  left: 175px;
+  opacity: 1;
+  transition: .25s ease;
+}
+
+.btn_home:hover{
+  color:#fff;
+  text-decoration: none;
+  background-color: rgb(49, 49, 218);
+}
+
+.btn_home:hover::after {
+  opacity: 0;
+  left: 185px;
+}
+
+.btn_home:focus{
+  color:#fff;
+  text-decoration: none;
+}
+.btn_home:visited{
+  color:#fff;
+  text-decoration: none;
+}
 .flex-center{
   display: flex;
   align-items: center;
@@ -661,6 +761,14 @@ form h1{
 .center .slick-next {
   right: 32px;
 }
+.about .slick-prev {
+  left: 20px;
+}
+
+.about .slick-next {
+  right: 32px;
+}
+
 
 .slick-slide img {
   width:100%;
@@ -1178,4 +1286,130 @@ transition: .5s ease;
 
 .dashboard{
   padding-top:140px;
+}
+.about{
+    height: 95vh;
+    widows: 100vw;
+    background-image: url('../assets/landingpage.png');
+background-position: center;
+background-attachment: fixed;
+background-size: cover;
+background-repeat: no-repeat;
+}
+.bottom{
+    align-content: center;
+    background-color: black;
+}
+.slide11{
+  background-image: url('../assets/landingpage.png');
+  background-size: cover;
+  
+
+  justify-content: center;
+  height: 100vh;
+  
+}
+.slide22{
+  background-image: url('../assets/landingpage.png');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  
+}
+.slide33{
+  background-image: url('../assets/landingpage.png');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.about_title {
+	color: bisque;
+	font-family: 'Vollkorn';
+	font-size: 100px;
+	line-height: 120px;
+	margin: 0 0 72px -10px;
+	position: relative;
+left: 20%;
+    top: 20%;
+}
+
+.about_p {
+	color: beige;
+	font-family: 'Roboto';
+	font-size: 28px;
+	line-height: 48px;
+	margin-bottom: 48px;
+	width: 500px;
+    position: relative;
+left: 40%;
+    top: 20%;
+    text-align: center;
+}
+.about_title2 {
+	color: bisque;
+	font-family: 'Vollkorn';
+	font-size: 100px;
+	line-height: 120px;
+	margin: 0 0 72px -10px;
+	position: relative;
+left: 20%;
+    top: -20%;
+}
+
+.about_p2 {
+	color: beige;
+	font-family: 'Roboto';
+	font-size: 32px;
+	line-height: 48px;
+	margin-bottom: 48px;
+	width: 500px;
+    position: relative;
+left: 10%;
+    top: 0%;
+    text-align: center;
+}
+.about_a {
+	color: #48222F;	font-size: 16px;
+	font-family: 'Vollkorn', serif;
+	font-style: italic;
+	font-weight: 400;
+	float: left;
+	line-height: 24px;
+	margin-bottom: 48px;
+	margin-top: 20px;
+	text-align: right;
+	text-decoration: none;
+	width: 240px;
+}
+.books{
+    opacity: .7;
+    border-radius:6px;
+    height: 13em;
+    width: 20em;
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+}
+.slick-next:before {
+    content: '→';
+}
+.slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: white;
+}
+.books2{
+    opacity: .7;
+    border-radius:6px;
+    height: 13em;
+    width: 13em;
+position: absolute;
+    left: 10vw;
+    top:170%;
 }

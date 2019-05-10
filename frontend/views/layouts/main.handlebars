@@ -115,7 +115,20 @@
                     })
                 })
             }
-           
+        
+           if(document.title == 'About Page'){
+                $(document).ready(function(){
+                     $('.about').slick({
+                infinite: true,
+                        slidesToShow: 3,
+                         slidesToScroll: 3;  
+                    });
+                    
+                });
+                
+            }
+                
+                    
             if(document.title == 'Home Page'){
                 $(document).ready(function(){
                      $('.center').slick({
