@@ -38,7 +38,7 @@ module.exports = {
         const userCollection = await users();
         var user = await userCollection.find({ email: email }).toArray()
         if(user.length < 1){
-            throw "Email doesn\'t exist!"
+            throw "Email doesn\'t exist! Please sign up"
             
         }
         console.log("User's password")
